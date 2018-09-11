@@ -1,0 +1,55 @@
+☐ Delivery System .
+   - Delivery Guy Belongs To User
+   - Delivery Guy Has Many Orders
+   - Order should have status of delivered.
+   - Fill Form for the cart for address, containing phone number,address from to,available hours
+   - Shipping Percentage.
+☐ Cart Should be assoicated with an address.
+     - User has One Address, Cart Belongs To User , Address HasOne User
+✔ Tax @done (18-08-27 07:57)
+ ✔ Tax Percentage is applied to whole cart price. @done (18-08-27 07:56)
+ ✔ Tax Percentage is set in config. @done (18-08-27 07:56)
+✔ Search Products. @done (18-08-27 07:57)
+ ✔ Search by Type @done (18-08-27 07:57)
+ ✔ Search By Attributes. @done (18-08-27 07:57)
+ ✔ Search by Product Name @done (18-08-27 07:57)
+☐ Smart Methods
+  - Returns Totals, Subtotal, total quantities,
+✔ Copoun System. @done (18-08-27 07:51)
+  ✔ Generate Key , percentage , in product page, number of coupons, expiration date. @done (18-08-27 07:51)
+  ✔ total price - price * percentage @done (18-08-27 07:51)
+  ✔ users @done (18-08-27 07:51)
+  ✔ coupons @done (18-08-27 07:51)
+  ✔ user_coupon. @done (18-08-27 07:51)
+  ✔ User And Coupon Many To Many. @done (18-08-27 07:51)
+  ✔ Product & Coupon One-To-Many. @done (18-08-27 07:51)
+☐ Categories
+  - Latest
+  ✔ Price Limit @done (18-08-08 19:23)
+  - Highly Rated.
+  - Attributes ( Or Through Current Collection , retrieve the filtered attributes. ).
+  ✔ Type. @done (18-08-08 19:23)
+  ✔ Location (Seller has location , buyer has location) @done (18-08-10 03:12)
+ ☐ Sale 
+   - Polymorphic One To Many
+   - Sale could be on category, specific product, type of products.
+ ✔ Wishlist & Cart @done (18-08-27 20:16)
+ ✔ Wishlist shouldn't decrement the stock. @done (18-08-27 20:15)
+ ✔ At Wishlist Repo, you should transform the wishlist into a cart, if user is going to pay for. @done (18-08-27 20:15)
+
+Suppliers Belongs To User
+Supplier HasMany Employees.
+Supplier hasMany Customers
+User can be Customer,Employee
+Customer  has Coupons, Cart , Wishlist
+Supplier has Products
+Employee Creates Coupons,Delivers.
+Supplier -> name , location , product_types.
+Customer ->address, city , phone number , 
+
+Customer  Buy auth()->user()->customer->coupons
+Customer belongsTo Supplier
+
+Supplier Sell auth()->user()->supplier->coupons
+Admin Manages Coupons etc.. auth()->user()->admin->
+User Basic User.
